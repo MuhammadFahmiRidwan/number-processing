@@ -1,21 +1,40 @@
+// minimum array
 function min(arr) {
-  return 0
+  return arr.reduce(function (x, y)  {
+    return (x < y ? x : y)
+  } ) 
 }
 
-function max(arr) {
-
+// maximum array
+function max(arr){
+  return arr.reduce(function (x, y){
+    return (x > y ? x : y)
+  } ) 
 }
 
-function mean(arr) {
-
+// mean (rata-rata) array
+function mean(arr){
+  var jumlah = 0
+  for (i = 0; i < arr.length; i++){
+    jumlah += arr[i]
+  }
+return jumlah / arr.length
 }
 
-function odds(arr) {
-
+// odds array
+function odds(arr){
+var odds1 = arr.filter (function getodds(m){
+  return m % 2 === 1
+})
+return odds1.join(',')
 }
 
-function evens(arr) {
-
+// evens array
+function evens(arr){
+var even = arr.filter (function getevens(n){
+  return n % 2 === 0
+})
+return even.join(',')
 }
 
 function numberProcessing(arr) {
